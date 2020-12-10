@@ -13,3 +13,9 @@ print (l)
 
 Write a program which will find all such numbers which are divisible by 8 but are not a multiple of 5 and 6 and 7,
 between 0 and 500(both included)
+
+l=[]
+for i in range(4000, 4501:
+    if (i%8==0 and i%5!=0 and i%6!=0):
+        l.append(str(i))
+print (l)
