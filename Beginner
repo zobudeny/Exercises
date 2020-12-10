@@ -1,0 +1,15 @@
+This is my first Project on GitHub, so please, if I am doing something what am I not supposed to, dont take it personally :)
+
+1.
+---------------------------------------------------------------------------------------------------------
+Write a program which will find all such numbers which are divisible by 9 but are not a multiple of 5 and 2,
+between 4000 and 4500 (both included)
+
+l=[]
+for i in range(4000, 4501:
+    if (i%9==0 and i%5!=0 and i%2!=0):
+        l.append(str(i))
+print (l)
+
+Write a program which will find all such numbers which are divisible by 8 but are not a multiple of 5 and 6 and 7,
+between 0 and 500(both included)
