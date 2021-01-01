@@ -1,0 +1,14 @@
+with open("day1.txt", "r") as fp:
+    num = fp.readlines()
+
+num = [int(i.split("\n")[0]) for i in num]
+
+#part 1
+for i in num:
+    if 2020 - i in num:
+            print(i * (2020 - i))
+#part 2
+for i in num:
+    for j in num:
+        if 2020 - i - j in num:
+            print(i * j * (2020 - i - j))
