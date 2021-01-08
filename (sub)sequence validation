@@ -1,0 +1,13 @@
+# validate subsequence, if B is subsequence of A
+A = [3, 5, -4, 8, 11, 1, -1, 6]
+B = [3, 11, -1, 6]
+
+index_B = 0
+for i in A:
+	if index_B == len(A):
+		break
+	if B[index_B] == i:
+		index_B += 1
+print(index_B == len(B))
+# subsequence is valid if index_B == len(B)
+# subsequence is not valid if index_B != len(B)
