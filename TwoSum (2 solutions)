@@ -1,0 +1,28 @@
+A = [3, 5, -4, 8, 11, 1, -1, 6]
+TargetSum = 10
+
+for i in A:
+   for y in A:
+      if i is not y:
+         if i + y == TargetSum:
+            print(i, y)
+
+
+####The up method is very slow due to for loops and its better to use the down method.
+
+A = [3, 5, -4, 8, 11, 1, -1, 6]
+TargetSum = 10
+
+A = sorted(A)
+L = 0
+R = len(A) - 1
+
+while A[L] < A[R]:
+   CurrentSum = A[L] + A[R]
+   if CurrentSum < TargetSum:
+      L += 1
+   if CurrentSum > TargetSum:
+      R -= 1
+   if CurrentSum == TargetSum:
+      print(A[L], A[R])
+      break
