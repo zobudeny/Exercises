@@ -1,0 +1,12 @@
+A = [0, 1, 1, 2]
+n = 1
+while A:
+    A_n = A[2 + n] + A[1 + n]
+    n += 1
+    A.append(A_n)
+    if len(A) > 10:
+        break
+
+print(A)
+
+#A should be equal to [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
