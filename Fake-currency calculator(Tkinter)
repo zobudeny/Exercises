@@ -1,0 +1,53 @@
+import tkinter as tk
+
+
+window = tk.Tk()
+window.title("Simple fake-currency calculator")
+
+def USD_to_EUR():
+    USD_Value = ent_USD.get()
+    EUR_Value = (float(USD_Value) * 0.9)
+    lbl_result["text"] = f"{round(EUR_Value, 3)} EUR"
+def EUR_to_USD():
+    EUR_Value1 = ent_EUR.get()
+    USD_Value1 = (float(EUR_Value1) * 1.1)
+    lbl_result1["text"] = f"{round(USD_Value1, 3)} USD"
+
+#############################################################
+frm_entry = tk.Frame(master=window)
+ent_USD = tk.Entry(master=frm_entry, width=10)
+lbl_USD = tk.Label(master=frm_entry, text="USD")
+ent_EUR = tk.Entry(master=frm_entry, width=10)
+lbl_EUR = tk.Label(master=frm_entry, text="EUR")
+
+ent_USD.grid(row=0, column=0)
+lbl_USD.grid(row=0, column=1)
+ent_EUR.grid(row=1, column=0)
+lbl_EUR.grid(row=1, column=1)
+#############################################################
+btn_convert = tk.Button(
+    master=window,
+    text="\N{RIGHTWARDS BLACK ARROW}",
+    command=USD_to_EUR
+)
+lbl_result = tk.Label(master=window, text="EUR")
+
+frm_entry.grid(row=0, column=0)
+btn_convert.grid(row=0, column=2)
+lbl_result.grid(row=0, column=3)
+
+#############################################################
+btn_convert1 = tk.Button(
+    master=window,
+    text="\N{RIGHTWARDS BLACK ARROW}",
+    command=EUR_to_USD
+)
+lbl_result1 = tk.Label(master=window, text="USD")
+
+frm_entry.grid(row=0, column=0)
+btn_convert1.grid(row=1, column=2)
+lbl_result1.grid(row=1, column=3)
+
+##################################################
+#Somehow I am not able to keep 2 lines in the grid. Programm is always showing a larger grid than it should be. On the other hand, function is working.
+window.mainloop()
